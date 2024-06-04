@@ -5,7 +5,6 @@ export default function Ref() {
   const inputRef = useRef();
   const divRef = useRef();
   const number = useRef(0);
-  console.log(inputRef.current);
 
   function focustoInput() {
     inputRef.current.focus();
@@ -14,13 +13,12 @@ export default function Ref() {
     divRef.current.style.color = 'red';
     divRef.current.style.border = '5px solid red';
   }
-
   console.log(number.current);
-
   function sayiArttır() {
     number.current += 1;
-    console.log(number.current);
+    console.log('fonk ici' + number.current);
   }
+
   return (
     <div ref={divRef}>
       <h1>USE REF</h1>

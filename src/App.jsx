@@ -10,9 +10,8 @@ function App() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     PlaceHolderAPI.get('1').then((response) => setPosts(response));
-  });
-  console.log(posts);
-  console.log(selected);
+  }, []);
+
   return (
     <>
       <Ref />
